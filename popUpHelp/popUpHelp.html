@@ -1,0 +1,156 @@
+<html>
+<head>	
+	<script type="text/javascript" src="lib/js/scriptaculous/lib/prototype.js"></script>
+	<script type="text/javascript" src="lib/js/scriptaculous/src/scriptaculous.js"></script>
+	
+	<script type="text/javascript" src="lib/js/Utils.js"></script>
+	<script type="text/javascript" src="lib/js/ajaxUtils.js"></script>
+	<script type="text/javascript" src="lib/js/popUpDiv.js"></script>	
+	
+	<link rel="stylesheet" media="screen" href="lib/css/popUpDiv.css"/>
+	<link rel="stylesheet" media="screen" href="lib/css/rounded.css"/>
+</head>
+<body>
+	
+	<br/>
+	<br/>
+	<br/>
+	<hr/>
+	
+	<input type="button" 
+		   value="CLICK ME" 
+		   onclick="javascript:OpenPopup( 
+				{ 
+					draggable:false, 
+					height:350, 
+					width:450, 
+					overlay:true, 
+					className:'popUpDiv',						
+					content:$('contentDiv').innerHTML
+				});"/>
+	<br/>
+	<br/>
+	<input type="button" 
+		   value="ajax ME" 
+		   onclick="javascript:OpenPopup( 
+				{ 
+					draggable:false, 
+					height:400, 
+					width:450, 
+					overlay:true,
+					className:'popUpDiv',
+					contentLoc:'filler_123.inc'						
+				});"/>
+	
+	
+	<br/>
+	<hr/>
+	<br/>
+	<br/>
+	<br class="cl"/>	
+	
+	<div class="roundedContainer">
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<div class="topRow">
+			<div class="topLeft"></div>
+			<div class="topMiddle"></div>
+			<div class="topRight"></div>
+		</div>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<br class="cl"/>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<div class="middleRow">
+			<div class="leftMiddle"></div>
+			<div class="contentOuter">
+				<div class="contentInner">
+					<div id="lorem3">
+						This is test Content! This is test Content! This is test Content! This is test Content!
+						This is test Content! This is test Content! This is test Content! This is test Content!
+						This is test Content! This is test Content! This is test Content! This is test Content!
+						This is test Content! This is test Content! This is test Content! This is test Content!
+						This is test Content! This is test Content! This is test Content! This is test Content!
+						This is test Content! This is test Content! This is test Content! This is test Content!
+						This is test Content! This is test Content! This is test Content! This is test Content!
+						This is test Content! This is test Content! This is test Content! This is test Content!
+						This is test Content! This is test Content! This is test Content! This is test Content!
+						This is test Content! This is test Content! This is test Content! This is test Content!
+						This is test Content! This is test Content! This is test Content! This is test Content!
+						This is test Content! This is test Content! This is test Content! This is test Content!
+						This is test Content! This is test Content! This is test Content! This is test Content!
+						This is test Content! This is test Content! This is test Content! This is test Content!
+						This is test Content! This is test Content! This is test Content! This is test Content!
+						This is test Content! This is test Content! This is test Content! This is test Content!
+						This is test Content! This is test Content! This is test Content! This is test Content!
+						This is test Content! This is test Content!
+					</div>									
+				</div>				
+			</div>
+			<div class="rightMiddle"></div>
+		</div>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<br class="cl"/>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<div class="bottomRow">
+			<div class="bottomLeft"></div>
+			<div class="bottomMiddle"></div>
+			<div class="bottomRight"></div>
+		</div>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	</div>
+
+	<br class="cl"/>
+	<!--
+	<div style="position:absolute; top:100px; left:345.5px; height:400px; width:450px;" class="popUpDiv" id="blah1">
+		<div class="popUpTitleBar">
+		 	<span class="titleBarCloseBtn">  <a href="javascript:;" onclick="javascript:ShowPage();">[X]</a>  </span>
+		 </div>
+		 <div class="popUpDivContent">
+		 	<h3>Sample PopUp</h3>
+		 </div>
+	</div>
+	-->
+
+	<div id="contentDiv" style="display:none;">
+		<table align="center">
+			<tr>
+				<th>Boolean Term</th>
+				<th>Example</th>
+				<th>Set of Retrieval</th>
+			</tr>
+			<tr><td colspan="3"><hr/></td></tr>
+			<tr>
+				<td> <b>AND</b> </td>
+				<td>
+					rodgers <b>AND</b> hammerstein <br/>
+					children <b>AND</b> poverty 
+				</td>
+				<td> <img src="images/AND.gif" /> </td>
+			</tr>
+			<tr><td colspan="3"><hr/></td></tr>
+			<tr>
+				<td> <b>OR</b> </td>
+				<td>
+					sixties <b>OR</b> 60s <b>OR</b> 1960s <br/>
+					labor <b>OR</b> labour <br/>
+					email <b>OR</b> e-mail 
+				</td>
+				<td> <img src="images/OR.gif" /> </td>
+			</tr>
+			<tr><td colspan="3"><hr/></td></tr>
+			<tr>
+				<td> <b>NOT</b> </td>
+				<td> 
+					caribbean <b>NOT</b> cuba <br/>
+					jockey <b>NOT</b> disc
+				</td>
+				<td> <img src="images/NOT.gif" /> </td>
+			</tr>
+		</table>
+	</div>
+
+	<script type="text/javascript">
+		//loremIpsumFill('lorem3',6);
+	</script>
+
+</body>
+</html>

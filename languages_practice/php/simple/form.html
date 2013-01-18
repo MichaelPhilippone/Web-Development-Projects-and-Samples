@@ -1,0 +1,63 @@
+<html>
+
+<head>
+	<title>AJAX</title>
+	
+	<script type="text/javascript" language="javascript" src="/~michael/LIB/prototype/prototype.js"></script>
+	
+	<script type="text/javascript" language="javascript">
+		
+		function doAjax(param1,param2) { 
+			var params = 
+				'name=' + encodeURIComponent( param1 ) + 
+				'&age=' + encodeURIComponent( param2 );
+			
+			var success = 
+				function(response) { 
+					$("outputBox").style.display = 'block'; 
+					$("outputBox").innerHTML = "";
+					for (var i in response) {
+						$("outputBox").innerHTML += 
+								'postResponse.' + i + ' = '+ response[i] + '<hr/>'; 
+					}
+				};
+			
+			var failure = 
+				function(t) { 
+					$("outputBox").style.display = 'block'; 
+					$("outputBox").innerHTML = "Failure <br/>(epic.)<br/><br/>";
+					$("outputBox").innerHTML += "Error code: " + t.status + "<br/><br/>"
+					$("outputBox").innerHTML += "Error message: " + t.statusText + "<br/><br/>"
+					$("outputBox").innerHTML += "Response: " + t.responseText + "<br/><br/>"
+				};
+				
+			var myAjax = 
+				new Ajax.Request(
+					"action.php", 
+					{ method:'post', postBody:params, onSuccess:success, onFailure:failure}
+				);
+		}
+	</script>
+	<style type="text/css">
+		#outputBox 
+		{
+			background-color:#00FF00; 
+			color:#FF0000; 
+			border:1px solid #3366D0; 
+			display:none; 
+			padding:10px 5px 10px 5px;
+		}
+	</style>
+</head>
+<body>
+<h2>An Ajax request made to a PHP page:</h2>
+<form action="javascript:doAjax($('name').value, $('age').value)" method="post">
+ <p>Your name: <input type="text" name="name" id="name"/></p>
+ <p>Your age: <input type="text" name="age" id="age"/></p>
+ <p><input type="submit" /></p>
+</form>
+	<div id="outputBox">
+	</div>
+
+</body>
+</html>

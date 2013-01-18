@@ -1,0 +1,28 @@
+* Notes / Instructions:
+* > comments are preceded (first char in the line)
+*   by an asterisk
+*
+* > data field labels are enclosed in '[[[' and ']]]'
+* 	string sequences.  (see 'data-01' example below)
+*
+* > the actual page data is contained between 
+*   "{{{" and "}}}" brackets 
+*   (line spacing does not matter)
+*
+* The DATA:
+
+[[[data01]]]
+{{{ 
+	<span style="color:#FF0000;">
+		Testing here! 
+		*
+		*Comments can even be nested in a data directive!!
+		*
+	</span> 
+}}}
+
+
+[[[debug]]] 
+{{{
+	And this is put in the second! 
+}}}

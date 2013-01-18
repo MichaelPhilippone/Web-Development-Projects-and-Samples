@@ -1,0 +1,25 @@
+<html>
+<head>
+	<script type="text/javascript" src="ajax.js"></script>
+</head>
+	<body>
+	
+		<form id="myForm">
+			Name: <input type="text" id="username" />
+			Time: <input type="text" id="time" />
+		</form>
+	
+	
+		<br/>
+		<hr/>
+		<br/>
+		
+		
+		<form id="suggestForm">
+			<input type="text" id="txt1" onkeyup="showHint(this.value)"/>
+		</form>
+		
+		<p>Suggestions: <span id="txtHint"></span></p>
+	
+	</body>
+</html>

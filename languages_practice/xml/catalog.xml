@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xform.xsl"?>
+
+<catalog title="onJava.com" publisher="O'Reilly">
+	
+	<journal>
+		<title>XML Journal</title>
+	</journal>
+	
+	<journal>
+		<title>Java Developer Journal</title>
+	</journal>
+	
+</catalog>

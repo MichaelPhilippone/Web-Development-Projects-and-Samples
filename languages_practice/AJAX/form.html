@@ -1,0 +1,61 @@
+<html>
+
+<head>
+	<title>AJAX</title>
+	
+	<script type="text/javascript" language="javascript" src="scriptaculous/prototype.js"></script>
+	
+	<script type="text/javascript" language="javascript">
+		
+		function doAjax() { 
+			$('outputBox').innerHTML = 'CLIENT SIDE: <br/>';
+			
+			var params = '';
+			
+			for( var i = 1; i <= 3; i = i + 1)
+			{
+				$('outputBox').innerHTML += $('param'+i).innerHTML + '<br/>';
+				params += 'param'+i+'=' + encodeURIComponent( $('param'+i).innerHTML ) + '&';
+			}
+			
+			var url = '127.0.0.1:58899/PROCESS';
+
+			//alert('params = ' + params + '\nURL = ' + url);
+			
+			var success = 
+				function(t) { 
+					$('outputBox').innerHTML = 'SERVER SIDE: <br/>';
+					$("outputBox").innerHTML = t.responseText; 
+				};
+			
+			var failure = 
+				function(t) { 
+					$("outputBox").innerHTML = "Failure (epic)";
+				};
+				
+			//var myAjax = new Ajax.Request(url, {method:'post', postBody:params, onSuccess:success, onFailure:failure});
+
+		}
+	</script>
+
+</head>
+<body style="margin:20px; padding:20px; border:1px solid #606060;">
+	<div id="outputBox" style="background-color:#00FF00;color:#0000FF; border:1px solid #606060; float:left; width:50%;">
+			 &nbsp;
+	</div>
+	
+	<div id="paramContainer" style="float:right; width:50%; text-align:center;">
+		PARAMETERS:
+		<br/>
+		<span id="param1">Michael</span>		<br/>
+		<span id="param2">Rochester</span>		<br/>
+		<span id="param3">Washington</span>		
+	</div>
+	
+	<br style="clear:both;"/>
+	<div>
+		<input type="button" value="CLICK ME FOR AJAX" onclick="javascript:doAjax();"/>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+/*
+ * WHAT: 	Stylesheet delarations for rounded corner markup for popUpHelp
+ * WHO: 	Michael Philippone
+ * WHEN: 	03 April 2009
+ */
+
+.roundedContainer {
+	height:400px;
+	width:500px;
+	margin:0 auto;
+}
+.cl { clear:both; }
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* BOX TOP STYLES: ++++++++++++++++++++++++++++++++++++++++++++ */		
+	.toprow {
+		margin:0;
+		padding:0;
+	}
+	.topLeft {
+		float:left;
+		height:30px;
+		width:23px;
+		background-image:url("../images/roundedCorners/top_left.jpg");
+		background-position:top left;
+		background-repeat:no-repeat;
+	}
+	.topMiddle {
+		float:left;
+		width:452px;
+		height:27px;
+		background-image:url("../images/roundedCorners/top_middle.jpg");
+		background-repeat:repeat-x;
+	}
+	.topRight {
+		float:right;
+		height:30px;
+		width:25px;
+		background-image:url("../images/roundedCorners/top_right.jpg");
+		background-repeat:no-repeat;
+	}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* BOX MIDDLE STYLES ++++++++++++++++++++++++++++++++++++++++++++ */		
+	.middleRow {
+		margin:0;
+		padding:0;
+	}
+	.leftMiddle {
+		float:left;
+		width:8px;
+		height:100%;
+		background-image:url("../images/roundedCorners/left_middle.jpg");
+		background-repeat:repeat-y;
+	}
+	.contentOuter {
+		padding:0;
+		margin:0;
+	}
+	.contentInner {
+		float:left;
+		padding:5px 5px 0 5px;
+		margin:0;
+		width:90%;
+	}
+	.rightMiddle {
+		float:right;
+		width:5px;				
+		height:100%;
+		background-image:url("../images/roundedCorners/right_middle.jpg");
+		background-repeat:repeat-y;
+	}
+	
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* BOX BOTTOM STYLES ++++++++++++++++++++++++++++++++++++++++++++ */		
+	.bottomRow {
+		margin:0;
+		padding:0;
+	}
+	.bottomLeft {
+		float:left;
+		height:27px;
+		width:22px;
+		background-image:url("../images/roundedCorners/bottom_left.jpg");
+	}
+	.bottomMiddle {
+		float:left;
+		height:27px;
+		width:456px;
+		background-image:url("../images/roundedCorners/bottom_middle.jpg");
+		background-repeat:repeat-x;
+	}		
+	.bottomRight {
+		float:right;
+		height:27px;
+		width:22px;
+		background-image:url("../images/roundedCorners/bottom_right.jpg");
+	}	
+/* ++++++++++++++++++++++++++++++++++++++++++++ */

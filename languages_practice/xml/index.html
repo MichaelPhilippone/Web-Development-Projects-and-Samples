@@ -1,0 +1,48 @@
+<html>
+<head>
+<script type="text/javascript">
+
+	function loadXMLDoc(fname) {
+
+		var xmlDoc;
+		// code for IE
+		if (window.ActiveXObject) {
+		  xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+		}
+		// code for Mozilla, Firefox, Opera, etc.
+		else if (document.implementation && document.implementation.createDocument) {
+		  xmlDoc=document.implementation.createDocument("","",null);
+		}
+		else {
+		 alert('Your browser cannot handle this script');
+		}
+		
+		xmlDoc.async=false;
+		xmlDoc.load(fname);
+		return(xmlDoc);
+	}
+
+	function displayResult(xmlFile, xslFile) {
+
+		xml=loadXMLDoc(xmlFile);
+		xsl=loadXMLDoc(xslFile);
+		
+		// code for IE
+		if (window.ActiveXObject) {
+		  ex=xml.transformNode(xsl);
+		  document.getElementById("example").innerHTML=ex;
+		} else if (document.implementation && document.implementation.createDocument) {
+		// code for Mozilla, Firefox, Opera, etc.
+		  xsltProcessor=new XSLTProcessor();
+		  xsltProcessor.importStylesheet(xsl);
+		  resultDocument = xsltProcessor.transformToFragment(xml,document);
+		  document.getElementById("example").appendChild(resultDocument);
+		}
+	}
+</script>
+</head>
+<body id="example" 
+		style="background-color:#333333;" 
+		onload="displayResult('xml-to-html.xml', 'xml-to-html-2-and-improved.xsl')">
+</body>
+</html>

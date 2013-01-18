@@ -1,0 +1,72 @@
+/* **********************************************************
+ *	Styles for the pop up Div element(s)
+ *
+ *	CREATED:		04 FEB 2009
+ *	LAST MODIFIED:	26 MAR 2009
+ *	AUTHOR:			Michael Philippone 
+ *	AUTHOR EMAIL:	michael@corporatezen.com
+ ********************************************************* */
+
+/*
+ * Generic popup styles, same for every implementation:
+ */
+.popUpDiv 
+{ 
+	background-color:#FFFFFF;
+	z-index:9999;
+	position:absolute;
+		top:0;
+		left:0;
+	height:0;
+	width:0;
+	/*border:2px solid #FFAA00;*/
+	border:2px solid #00AAFF;
+	overflow:auto;
+}
+
+.popUpTitleBar a 
+{ 
+	color:#FFFFFF; 
+	font-weight:bold; 
+	text-decoration:none; 
+}
+
+.popUpTitleBar 
+{
+	padding:5px;
+	background-color:#C0C0C0;
+	color:#FFFFFF;
+	height:25px;
+}
+
+.popUpTitleBarText {
+	float:left;
+	color:#FFFFFF;
+	font-weight:bold;
+	font-size:13px;
+}
+
+.popUpDivContent 
+{
+	padding:0 5px 5px 20px;
+}
+
+.titleBarCloseBtn
+{
+	float:right;
+	margin-right:5px;
+}
+
+.overlay 
+{
+	background-color:#303030;
+	width:0;
+	height:0px;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:99;
+	display:none;
+	opacity: .75;
+	filter: alpha(opacity=75);
+}

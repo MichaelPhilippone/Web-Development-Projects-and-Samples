@@ -1,0 +1,36 @@
+
+/*
+ * stylesheet
+ */
+ 
+body { 
+	background-color: #DDDDDD;
+	color:#606060;
+	margin: 20px;
+	border:1px solid #333333;
+	padding:20px;
+	text-align:center;
+}
+
+.pageBody {
+	margin-left:auto;
+	margin-right:auto;
+	text-align:left;
+	
+	border:1px solid #339955;
+	
+	padding:20px;
+}
+
+.slider {
+	background-color: #FF00FF;
+	height:30px;
+	width:10px;
+	
+}
+
+.sliderbar {
+	background-color: #02342F;
+	height:30px;
+	width:80%;
+}

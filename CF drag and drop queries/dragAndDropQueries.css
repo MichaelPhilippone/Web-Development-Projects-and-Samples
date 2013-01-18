@@ -1,0 +1,68 @@
+.components_toolBox {
+	background-color:#73B1B7;
+	width:575px;
+	padding:10px;
+}
+
+.components_builder_outer {
+	background-color:#C1FFC1;
+	width:575px;
+	padding:50px;
+	border:3px solid #303030;
+	
+	margin:0 0 0 0;
+}
+
+#fieldNamesHdr {
+	color:#DFDFDF;
+	font-size:16px;	
+}
+
+#logOpHdr {
+	color:#DFDFDF;
+	font-size:16px;
+}
+
+.components_builderHover {
+	border:3px dashed #303030;
+}
+
+.qryField {			
+	background-color:#CCCCCC;
+	border:1px solid #303030;
+	float:left;
+	margin-left:10px;
+	margin-top:8px;
+	padding:15px 30px 15px 30px;
+}
+.qryField:hover { 
+	cursor:pointer; 
+	background-color:#909090;
+}
+
+.qryField:active { 
+	background-color:#339933;
+	font-weight:bold; 
+}
+
+.qryPart {
+	background-color:#DFDFDF;
+	color:#000000;
+	padding:5px 20px 5px 20px;
+	margin:0 0 0 5px;
+}
+
+span.closer {
+	text-align:right;
+	font-size:9px; 
+	height:10px;
+	position:relative; 
+		top:-5px; 
+		left:10px;
+}
+span.closer:hover {
+	background-color:#FF9966;
+	cursor:pointer;
+}
+
+.clearIt { clear:both; }

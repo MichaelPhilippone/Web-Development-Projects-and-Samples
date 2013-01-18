@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        
+        <title>Javascript CMS :: sandbox page</title>
+        
+        <link rel="stylesheet" href="css/universal.css" type="text/css" />
+        
+        <script src="js/prototype.js" type="text/javascript"></script>
+        <script src="js/ajax.js" type="text/javascript"></script>
+        <script src="js/debug.js" type="text/javascript"></script>
+        <script src="js/stringUtils.js" type="text/javascript"></script>
+        <script src="js/pageFunctions.js" type="text/javascript"></script>
+        
+    </head>
+    
+    <body>
+			<h1 class="title">Testing Page</h1>
+	
+			<h2>Here is an example <br/>(It's rendered on page-load!)</h2>
+			<!-- Content Panel: -->
+				<div class="contentBox" id="data01">&nbsp;</div>
+			
+			<br/>
+			<hr/>
+
+			<h2>Debugging Output 01:</h2>
+			<!-- Content Panel: -->
+				<div class="contentBox" id="debug"></div>
+
+			<br/>
+			<hr/>
+
+			<!-- Jscript footer -->
+			<h4 style="text-align:center;">
+				<script type="text/javascript">
+					
+					var email= "mphilip1@ithaca.edu";
+					var name ="Michael Philippone";
+					
+					document.write("Maintained by <a href=mailto:"+email+">"+name+"</a>.");
+					document.write("<br /> Last modified " + document.lastModified +".");
+				</script>
+			</h4>
+			
+			
+			<!-- 
+				call up the contents of the empty CMS-filled areas: 
+				Uses ajax calls as per the prototype library to pull data from
+				corresponding text (*.txt) files on the webserver.
+				For ease of use, the files are located in the "content/*.txt" format.
+			-->
+			
+			<script type="text/javascript">
+				load("content/testPage.jcms");
+			</script>
+			
+    </body>
+    
+</html>

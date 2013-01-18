@@ -1,0 +1,61 @@
+* Comments in a J-CMS template file look like these!
+* They are preceded by an asterisk and therefore ignored before
+* parsing directives.  If that doesn't make sense, dont't worry!
+* All you need to worry about is: use them(!) and use them often(!!)
+* -
+* (after all, everyone loves to be able to easily maintain a site!)
+
+* Make sure that your comment lines have an asterisk as the 
+* FIRST CHARACTER (!!!) on the line
+
+
+
+[[[data01]]] 
+{{{ 
+	<span class="cmsContent">
+		Testing here!
+	</span> 
+}}}
+
+
+
+*as you can see, whitespace is also ignored!
+
+
+
+[[[data02]]]
+{{{ 
+	<span class="cmsContent">
+		I can even 
+		<br/> 
+		<b>embed</b> HTML!
+		<br/>
+		(Woohoo!)
+	</span>
+}}}
+
+
+[[[tutorialContent]]]
+{{{
+	TEST!! 
+	<br/> 
+	(content delivered via J-CMS!)
+	<br/>
+	<br/>
+	<a href="testPage.html">Testing page</a>
+	<br/>
+	<a href="liveTesting.html">Another testing page</a>
+	<br/>
+}}}
+
+
+[[[moreInfoContent]]]
+{{{
+	+ TODO: Add email link (the HREF attribute) support
+	<br/>
+	<br/>
+	+ NOTE: whitespace is ignored and HTML will be copied in directly
+}}}
+
+[[[debug]]]
+{{{ Hello World }}}

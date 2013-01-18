@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+<?xml-stylesheet type="text/xsl" href="xml-to-html-2-and-improved.xsl"?>
+-->
+<?xml-stylesheet type="text/xsl" href="xml-to-html.xsl"?>
+
+
+
+<catalog>
+  <cd>
+    <title>The Bends</title>
+    <artist>Radiohead</artist>
+    <country>UK</country>
+    <price>12.00</price>
+  </cd>
+
+  <cd>
+    <title>Last Exit</title>
+    <artist>Junior Boys</artist>
+    <country>USA</country>
+    <price>9.00</price>
+  </cd>
+    
+  <cd>
+    <title>Kid A</title>
+    <artist>Radiohead</artist>
+    <country>UK</country>
+    <price>10.00</price>
+  </cd>
+  
+  <cd>
+    <title>Illinoise!</title>
+    <artist>Sufjan Stevens</artist>
+    <country>USA</country>
+    <price>15.00</price>
+  </cd>
+  
+  <cd>
+    <title>Goldfly</title>
+    <artist>Guster</artist>
+    <country>USA</country>
+    <price>9.00</price>
+  </cd>
+  
+  <cd>
+    <title>Crash</title>
+    <artist>Dave Matthews Band</artist>
+    <country>USA</country>
+    <price>12.00</price>
+  </cd>  
+</catalog>

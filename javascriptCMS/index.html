@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        
+        <title>Javascript CMS</title>
+        
+        <link rel="stylesheet" href="css/universal.css" type="text/css" />
+        
+        <script src="js/prototype.js" type="text/javascript" language="javascript"></script>
+        
+        <script src="../LIB/jQuery/jquery-1.8.3.min.js" type="text/javascript" language="javascript"></script>
+        
+        <script src="js/stringUtils.js" type="text/javascript" language="javascript"></script>
+        <script src="js/pageFunctions.js" type="text/javascript" language="javascript"></script>
+        <script src="js/ajax.js" type="text/javascript" language="javascript"></script>
+        <script src="js/debug.js" type="text/javascript" language="javascript"></script>
+        
+        
+        
+    </head>
+    
+    <body>
+			<h1 class="title">J-CMS</h1>
+
+			<h2>What is it?</h2>
+			<div class="contentBox">
+				<big>J-CMS...</big>
+				<br/>
+				is a Content Management System using Javascript and DHTML!
+				<br/>
+				While this may seem light-duty and a bit under-prepared, sometimes all 
+				you need is a quick little fix to keep your web pages up-to-date 
+				without having to hack away at HTML, CSS and javascript for hours on end.
+				<br/>
+				<br/>
+				<big>J-CMS...</big>
+				<br/>
+				uses a series of templated text files, accessed with ajax to populate 
+				your pre-defined HTML elements at page-load.  
+				<br/>
+				It's dynamic, easy to use and (I think) fairly intuitive.  
+				<br/>
+				<br/>
+				Just set up your template and include a line of Javascript code at 
+				the end of your page and you are rolling!
+			</div>	
+
+		
+
+			<div class="panel">
+				<h2>Here is an example <br/>(It's rendered on page-load!)</h2>
+				
+				<!-- Content Panel: -->
+				<div class="contentBox" id="data01">&nbsp;</div>
+			</div>
+			
+			<div class="panel">
+				<h2>Here is another... !</h2>
+			
+				<!-- Content Panel: -->
+				<div class="contentBox" id="data02">&nbsp;</div>
+			</div>
+			
+			<br/>
+			<hr/>
+			
+			<script type="text/javascript">
+				function showHide(id)
+				{
+					if( $(id).style.display == "block" ) $(id).style.display = "none";
+					else $(id).style.display = "block";
+				}
+			</script>
+			
+			<h2>Here are some useful links and tools:</h2>
+			<ul>
+				<li>
+					For a quick tutorial and system overview, click
+					<a href="javascript:;" onclick="javascript:showHide('tutorialContent');">
+						HERE
+					</a>
+					<div class="popUp" id="tutorialContent">&nbsp;</div>	
+				</li>
+				
+				<li>
+					For more info and future work...
+					<a href="javascript:;" onclick="javascript:showHide('moreInfoContent');">
+						Click HERE
+					</a>
+					<div class="popUp" id="moreInfoContent">&nbsp;</div>
+				</li>
+			</ul>
+
+
+			<!-- Jscript footer -->
+			<h4 style="text-align:center;">
+				<script type="text/javascript">
+					
+					var email= "mphilip1@ithaca.edu";
+					var name ="Michael Philippone";
+					
+					document.write("Maintained by <a href=mailto:"+email+">"+name+"</a>.");
+					document.write("<br /> Last modified " + document.lastModified +".");
+				</script>
+			</h4>
+			
+			<div class="contentBox" id="debug">&nbsp;</div>			
+			
+			<!-- 
+				call up the contents of the empty CMS-filled areas: 
+				Uses ajax calls as per the prototype library to pull data from
+				corresponding text (*.txt) files on the webserver.
+				For ease of use, the files are located in the "content/*.txt" format.
+			-->
+			
+			<script type="text/javascript">
+				load("content/index.jcms");
+			</script>
+			
+    </body>
+    
+</html>

@@ -1,0 +1,129 @@
+UserType
+	-> UserTypeID
+		- numerical correspondence to the following field
+	-> UserTypeName
+		- 'Admin'
+			- can create / modify / delete / etc lists
+			- can add / remove ('moderate') lists
+			- can create / modify / delete / etc messages 
+			- can create / modify / delete / etc message templates
+		- 'Subscriber' (PHASE 2)
+			- can join lists
+			- can create and send messages to list (if allowed)
+		- 'Contact'
+			- Read-OPnly data, has no real membership in lists / groups / etc
+			- exists to organize contact info 
+			- allows admin to send emails to non-subscribers
+---------------------------------------------------------------------------------
+User
+	-> UserID
+	-> fname
+	-> lname
+	-> email
+	-> dateJoined
+	-> lastMod
+	-> password (hashed)
+	-> UserTypeID
+		- UserTypeID that designates roles / permissions for particular user
+	-> UniqueRegKey
+		- Unique Identifier for registration / password update purposes
+---------------------------------------------------------------------------------
+Message
+	-> messageID
+	-> title
+	-> subject
+	-> AurthorID
+		- UserID of user who created the message
+	-> lastMod
+---------------------------------------------------------------------------------
+Page (PHASE 2)
+	-> pageID
+	-> title
+	-> body
+	-> ListID
+		- Which list the page corresponds to
+---------------------------------------------------------------------------------
+List (PHASE 2)
+	-> ListID
+	-> name
+	-> moderatorID
+		- UserID of moderating user
+---------------------------------------------------------------------------------
+Template
+	-> TemplateID
+	-> body
+	-> name
+	-> createDate
+	-> lastMod
+	-> hasHTML
+		- boolean value indicating presence of HTML tags
+	-> AuthorID
+		- UserID of user who authored the content
+---------------------------------------------------------------------------------	
+Group
+	-> GroupID
+	-> ModeratorID
+		- UserID of group 'owner'
+	-> Members
+---------------------------------------------------------------------------------
+ContactList
+	-> ContactListID
+	-> OwnerUserID
+		- the ID of the UserID who owns the contact listing
+	-> ListName
+	-> createDate
+	-> lastMod
+---------------------------------------------------------------------------------
+ContactListEntry
+	-> ContactListEntryID
+	-> ContactListID
+		- Which entry does this belong to?
+	-> UserID
+		- Who is this entry about?
+	-> createDate
+	-> lastMod
+---------------------------------------------------------------------------------
+Attachment
+	-> attachmentID
+	-> path
+	-> UploadDate
+	-> LastMod
+	-> UserID
+		- user who uploaded the content
+	-> MessageID
+		- Which message does this belong to?
+---------------------------------------------------------------------------------
+ScheduledJobType
+	-> JobTypeID
+	-> JobTypeName
+		- Weekly
+		- Monthly
+		- Bi-Weekly
+		- Once
+---------------------------------------------------------------------------------
+ScheduledJob
+	-> JobID
+	-> JobTypeID
+	-> StartDate
+	-> EndDate
+	-> AuthorID
+		- UserID of user who created the job
+	-> Suppress
+		- flag to allow owner to stop / start job
+---------------------------------------------------------------------------------
+Report
+	-> ReportID
+	-> ReportBody
+	-> ReportFileID
+	-> OwnerID
+		- who should see this?
+	-> Date
+	-> ReoportFileID
+	-> ** other errors / conditions **
+---------------------------------------------------------------------------------
+ReportFile
+	-> ReportFileID
+	-> ReportFilePath
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------

@@ -1,0 +1,66 @@
+/*
+ * Styles specific to elements in this implementation of the popup
+ */
+
+/* hide this, we only use these elements to hold content for the popUp */
+.content { display:none; }
+
+/* the button styles for the pop up */
+.button
+{
+	width:250px;
+	background-color:#d5e7f5; 
+	border:1px solid #012b5d;
+	text-decoration:none;	
+	padding:15px;
+	margin:0 auto;
+}
+
+.button:hover
+{
+	background-color:#CC9900; 
+	cursor:pointer;
+	text-decoration:none;
+}
+
+/* ************************************************* */
+/* *********AVOID EDITING THE STYLES BELOW********** */
+/* ************************************************* */
+/*
+ * Generic popup styles, same for every implementation:
+ */
+.popUpDiv { 
+	display:none;
+	background-color:#FFFFFF;
+	z-index:9999;
+	position:absolute;
+		top:0;
+		left:0;
+	height:0;
+	width:0;
+	border:3px solid #eac95e;
+}
+.popUpTitleBar {
+	padding:5px;
+	background-color:#012b5d;
+	color:#FFFFFF;
+	height:15px;
+}
+.popUpTitleBar a {color:#FFFFFF; font-weight:bold; text-decoration:none;}
+#buttonContainer { margin: 0 auto; text-align:center; }
+/* the text in the header of the pop up */
+.popUpHeader {
+	font-size:12pt;
+	font-weight:bold;
+}
+.popUpDivContent {padding:20px; text-align:center;}
+.titleBarCloseBtn {float:right; margin-right:5px;}
+.overlay {
+	background-color:#000000;
+	position:absolute;
+		top:0;
+		left:0;
+	z-index:99;
+	opacity: .75;
+	filter: alpha(opacity=75);
+}

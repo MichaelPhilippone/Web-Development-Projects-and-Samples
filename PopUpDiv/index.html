@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	
+	<head>
+		<title>Pop Open Div (fake pop up)</title>
+		
+		<script type="text/javascript" src="utils.js"></script>
+		<script type="text/javascript" src="PopUpDiv.js"></script>
+		<script type="text/javascript" src="makeElement.js"></script>
+		<script type="text/javascript" src="scriptaculous/lib/prototype.js"></script>
+		<script type="text/javascript" src="scriptaculous/src/scriptaculous.js"></script>
+		
+		<link href="PopUpDiv.css" rel="stylesheet" media="screen" type="text/css"/>
+				
+	</head>
+	
+	<body style="margin:0; padding:0; background-color:#D0D0D0; text-align:center;">		
+			
+		<!-- The content body of the pop up -->
+		<div class="content" id="content">
+			<h1>This is Test Content!</h1>
+			This is an example of a pop out div.  The styles and code are 
+			in the associated "PopUpDiv.[css][js]" files and can be edited 
+			(though the parts that shouldn't be are annoted as such) as your themes
+			and site unity require.
+			<br/>
+		</div>
+				
+		<br/><br/><br/><br/><br/>
+			
+		<div class="button" onclick="javascript:pop('content' , false , 500 , 500);"> Pop. </div>
+	
+		<br/>
+		<br/>
+		
+		<div class="button" onclick="javascript:pop('content' , true , 500 , 500);"> Pop on top. </div>
+	
+		<script type="text/javascript">
+			/*
+			window.UIX = 0;
+			*/
+		</script>
+ 
+	<!-- END -->
+	</body>
+</html>
+

@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>Dynamic Text in JavaScript</title>
+		<script language="Javascript">
+			function ChangeTitle() {
+				var newText = document.form1.newtitle1.value;
+				var head1 = document.getElementById("head1");
+				head1.firstChild.nodeValue=newText;
+			}
+			function ChangeTitle2() {
+				var newText = document.form1.newtitle2.value;
+				var head2 = document.getElementById("head2");
+				head2.firstChild.nodeValue=newText;			
+			}
+
+		</script>
+	</head>
+	<body>
+		<h1 ID="head1">
+			Dynamic Text in JavaScript
+		</h1>
+		<p>
+			Using the W3C DOM, you can dynamically
+			change the heading at the top of this
+			page. Enter a new title and click the
+			Change button.
+		</p>
+		<form name="form1">
+			<input type="text" name="newtitle1" size="25" />
+			<input type="button" 
+					 value="Change!" 
+					 onClick="ChangeTitle();" />
+			<hr />
+			<input type="text" name="newtitle2" size="25" />
+			<input type="button" 
+					 value="Change!" 
+					 onClick="ChangeTitle2();" />
+		</form>
+		
+		<h2 style="color:#FF0000;" id="head2">HELLO</h2>
+	</body>
+</html>
